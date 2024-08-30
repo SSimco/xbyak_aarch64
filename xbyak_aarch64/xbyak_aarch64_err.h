@@ -26,6 +26,7 @@ enum {
   ERR_LABEL_IS_NOT_FOUND,        // use at LabelMgr
   ERR_BAD_PARAMETER,             // use at CodeArray
   ERR_CANT_PROTECT,              // use at CodeArray
+  ERR_CANT_DETACH,               // use at CodeArray
   ERR_OFFSET_IS_TOO_BIG,         // use at CodeArray
   ERR_CANT_ALLOC,                // use at CodeArray
   ERR_LABEL_ISNOT_SET_BY_L,      // use at LabelMgr

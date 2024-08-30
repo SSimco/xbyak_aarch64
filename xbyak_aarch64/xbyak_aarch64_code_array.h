@@ -157,8 +157,15 @@ public:
       throw Error(ERR_CANT_PROTECT);
     }
   }
+  bool detached = false;
+  void detachCode()
+  {
+    if(!isAllocType())
+      throw Error(ERR_CANT_DETACH);
+    detached = true;
+  }
   virtual ~CodeArray() {
-    if (isAllocType()) {
+    if (isAllocType() && !detached) {
       if (useProtect())
         setProtectModeRW(false);
       alloc_->free(top_);
